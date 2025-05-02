@@ -9,7 +9,7 @@ O enunciado do trabalho pode ser encontrado aqui:
 
 ## Dados do Aluno
 
-- **Nome completo:** [Preencher aqui]
+- **Nome completo:** Isabella Lacerda Lima
 - **Matrícula:** [Preencher aqui]
 - **Curso:** [Preencher aqui]
 - **Turma:** [Preencher aqui]
