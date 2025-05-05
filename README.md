@@ -9,9 +9,9 @@ O enunciado do trabalho pode ser encontrado aqui:
 
 ## Dados do Aluno
 
-- **Nome completo:** [Preencher aqui]
-- **Matrícula:** [Preencher aqui]
-- **Curso:** [Preencher aqui]
+- **Nome completo:** Isabella Lacerda Lima
+- **Matrícula:** 232003269
+- **Curso:** Engenharia de Software
 - **Turma:** [Preencher aqui]
 
 ---
