@@ -18,6 +18,7 @@ public class Main {
     private static DisciplinaController disciplinaController;
     private static AvaliacaoController avaliacaoController;
     private static Menu menu;
+    private int idade;
     
     public static void main(String[] args) {
         // Inicializar controladores
