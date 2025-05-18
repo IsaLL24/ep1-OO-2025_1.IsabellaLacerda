@@ -16,14 +16,10 @@ public class Aluno extends Pessoa {
     private Map<String, Map<String, Object>> historico;
     private String status;
     
-    /**
-     * Inicializa uma nova instância da classe Aluno.
-     * 
-     * @param nome Nome do aluno
-     * @param id Identificador único do aluno
-     * @param matricula Número de matrícula do aluno
-     * @param curso Curso de graduação do aluno
-     */
+    //Inicializa uma nova instância da classe Aluno.
+    // matricula Número de matrícula do aluno
+    //curso Curso de graduação do aluno
+     
     public Aluno(String nome, String id, String matricula, String curso) {
         super(nome, id);
         this.matricula = matricula;
@@ -33,84 +29,57 @@ public class Aluno extends Pessoa {
         this.status = "ativo";
     }
     
-    /**
-     * Retorna o número de matrícula do aluno.
-     * 
-     * @return Número de matrícula do aluno
-     */
+    // Retorna o número de matrícula do aluno
     public String getMatricula() {
         return matricula;
     }
     
-    /**
-     * Define o número de matrícula do aluno.
-     * 
-     * @param matricula Novo número de matrícula do aluno
-     */
+    //Define o número de matrícula do aluno.
+    
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
     
-    /**
-     * Retorna o curso de graduação do aluno.
-     * 
-     * @return Curso de graduação do aluno
-     */
+    // Retorna o curso de graduação do aluno.
+  
     public String getCurso() {
         return curso;
     }
     
-    /**
-     * Define o curso de graduação do aluno.
-     * 
-     * @param curso Novo curso de graduação do aluno
-     */
+    // Define o curso de graduação do aluno.
+    // curso Novo curso de graduação do aluno
+  
     public void setCurso(String curso) {
         this.curso = curso;
     }
     
-    /**
-     * Retorna a lista de turmas em que o aluno está matriculado.
-     * 
-     * @return Lista de turmas em que o aluno está matriculado
-     */
+    // 
+    //return Lista de turmas em que o aluno está matriculado
+     
     public List<Turma> getDisciplinas() {
         return disciplinas;
     }
     
-    /**
-     * Retorna o histórico acadêmico do aluno.
-     * 
-     * @return Histórico acadêmico do aluno
-     */
+    // Retorna o histórico acadêmico do aluno.
+    
     public Map<String, Map<String, Object>> getHistorico() {
         return historico;
     }
     
-    /**
-     * Retorna o status do aluno.
-     * 
-     * @return Status do aluno
-     */
+    // Retorna o status do aluno.
+     
     public String getStatus() {
         return status;
     }
     
-    /**
-     * Define o status do aluno.
-     * 
-     * @param status Novo status do aluno
-     */
+    // Define o status do aluno.
+     
     public void setStatus(String status) {
         this.status = status;
     }
     
-    /**
-     * Matricula o aluno em uma turma.
-     * 
-     * @param turma A turma em que o aluno será matriculado
-     * @return Um array contendo um booleano indicando sucesso ou falha e uma mensagem
-     */
+    // Matricula o aluno em uma turma.
+     
     public Object[] matricular(Turma turma) {
         // Verificar se a turma tem vagas disponíveis
         if (turma.getAlunos().size() >= turma.getCapacidade()) {
@@ -136,12 +105,8 @@ public class Aluno extends Pessoa {
         return new Object[] {true, "Matrícula realizada com sucesso"};
     }
     
-    /**
-     * Tranca a matrícula do aluno em uma turma.
-     * 
-     * @param turma A turma em que a matrícula será trancada
-     * @return Um array contendo um booleano indicando sucesso ou falha e uma mensagem
-     */
+    //Tranca a matrícula do aluno em uma turma.
+     
     public Object[] trancarDisciplina(Turma turma) {
         if (disciplinas.contains(turma)) {
             disciplinas.remove(turma);
@@ -151,11 +116,9 @@ public class Aluno extends Pessoa {
         return new Object[] {false, "Aluno não está matriculado nesta turma"};
     }
     
-    /**
-     * Tranca o semestre do aluno.
-     * 
-     * @return Um array contendo um booleano indicando sucesso ou falha e uma mensagem
-     */
+     // Tranca o semestre do aluno.
+     // return Um array contendo um booleano indicando sucesso ou falha e uma mensagem
+     
     public Object[] trancarSemestre() {
         // Trancar todas as disciplinas
         List<Turma> disciplinasTemp = new ArrayList<>(disciplinas);
@@ -169,12 +132,10 @@ public class Aluno extends Pessoa {
         return new Object[] {true, "Semestre trancado com sucesso"};
     }
     
-    /**
-     * Verifica se o aluno possui os pré-requisitos para cursar uma disciplina.
-     * 
-     * @param disciplina A disciplina a ser verificada
-     * @return true se o aluno possui os pré-requisitos, false caso contrário
-     */
+    // Verifica se o aluno possui os pré-requisitos para cursar uma disciplina.
+    // disciplina A disciplina a ser verificada
+    //return true se o aluno possui os pré-requisitos, false caso contrário
+    
     public boolean verificarPreRequisitos(Disciplina disciplina) {
         // Verificar se a disciplina tem pré-requisitos
         if (disciplina.getPreRequisitos().isEmpty()) {
