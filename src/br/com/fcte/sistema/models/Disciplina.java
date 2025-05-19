@@ -3,22 +3,19 @@ package br.com.fcte.sistema.models;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Classe que representa uma disciplina no sistema acadêmico.
- */
+//Classe que representa uma disciplina no sistema acadêmico.
+ 
 public class Disciplina {
     private String codigo;
     private String nome;
     private int cargaHoraria;
     private List<Disciplina> preRequisitos;
     
-    /**
-     * Inicializa uma nova instância da classe Disciplina.
-     * 
-     * @param codigo Código da disciplina
-     * @param nome Nome da disciplina
-     * @param cargaHoraria Carga horária em horas
-     */
+    // Inicializa uma nova instância da classe Disciplina.
+    // codigo Código da disciplina
+    // nome Nome da disciplina
+    // cargaHoraria Carga horária em horas
+    
     public Disciplina(String codigo, String nome, int cargaHoraria) {
         this.codigo = codigo;
         this.nome = nome;
@@ -26,85 +23,62 @@ public class Disciplina {
         this.preRequisitos = new ArrayList<>();
     }
     
-    /**
-     * Retorna o código da disciplina.
-     * 
-     * @return Código da disciplina
-     */
+    // Retorna o código da disciplina
+     
     public String getCodigo() {
         return codigo;
     }
     
-    /**
-     * Define o código da disciplina.
-     * 
-     * @param codigo Novo código da disciplina
-     */
+    // Define o código da disciplina.
+    // codigo Novo código da disciplina
+     
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
     
-    /**
-     * Retorna o nome da disciplina.
-     * 
-     * @return Nome da disciplina
-     */
+    //Retorna o nome da disciplina.
+
     public String getNome() {
         return nome;
     }
     
-    /**
-     * Define o nome da disciplina.
-     * 
-     * @param nome Novo nome da disciplina
-     */
+    // Define o nome da disciplina.
+    // nome Novo nome da disciplina
+     
     public void setNome(String nome) {
         this.nome = nome;
     }
     
-    /**
-     * Retorna a carga horária da disciplina.
-     * 
-     * @return Carga horária da disciplina
-     */
+    // Retorna a carga horária da disciplina.
+   
     public int getCargaHoraria() {
         return cargaHoraria;
     }
     
-    /**
-     * Define a carga horária da disciplina.
-     * 
-     * @param cargaHoraria Nova carga horária da disciplina
-     */
+    // Define a carga horária da disciplina.
+    // cargaHoraria Nova carga horária da disciplina
+    
     public void setCargaHoraria(int cargaHoraria) {
         this.cargaHoraria = cargaHoraria;
     }
     
-    /**
-     * Retorna a lista de disciplinas pré-requisito.
-     * 
-     * @return Lista de disciplinas pré-requisito
-     */
+    //Retorna a lista de disciplinas pré-requisito.
+    
     public List<Disciplina> getPreRequisitos() {
         return preRequisitos;
     }
     
-    /**
-     * Adiciona uma disciplina como pré-requisito.
-     * 
-     * @param disciplina A disciplina a ser adicionada como pré-requisito
-     */
+    // Adiciona uma disciplina como pré-requisito.
+    // disciplina A disciplina a ser adicionada como pré-requisito
+     
     public void adicionarPreRequisito(Disciplina disciplina) {
         if (!preRequisitos.contains(disciplina)) {
             preRequisitos.add(disciplina);
         }
     }
     
-    /**
-     * Remove uma disciplina da lista de pré-requisitos.
-     * 
-     * @param disciplina A disciplina a ser removida
-     */
+    // Remove uma disciplina da lista de pré-requisitos.
+    
     public void removerPreRequisito(Disciplina disciplina) {
         preRequisitos.remove(disciplina);
     }
