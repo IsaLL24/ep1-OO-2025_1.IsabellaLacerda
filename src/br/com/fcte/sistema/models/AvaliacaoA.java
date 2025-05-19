@@ -2,27 +2,19 @@ package br.com.fcte.sistema.models;
 
 import java.util.Map;
 
-/**
- * Implementação da avaliação do tipo A: Media Final = (P1 + P2 + P3 + L + S) / 5
- */
+// Implementação da avaliação do tipo A: Media Final = (P1 + P2 + P3 + L + S) / 5
+
 public class AvaliacaoA implements Avaliacao {
     
-    /**
-     * Retorna o tipo de avaliação.
-     * 
-     * @return Tipo de avaliação
-     */
+    // Retorna o tipo de avaliação.
+     
     @Override
     public String getTipo() {
         return "A";
     }
     
-    /**
-     * Calcula a média final usando a fórmula: (P1 + P2 + P3 + L + S) / 5
-     * 
-     * @param notas Mapa com as notas do aluno (P1, P2, P3, L, S)
-     * @return Média final calculada ou -1 se alguma nota estiver faltando
-     */
+    // Calcula a média final usando a fórmula: (P1 + P2 + P3 + L + S) / 5
+     
     @Override
     public double calcularMedia(Map<String, Double> notas) {
         // Verificar se todas as notas necessárias estão presentes
