@@ -8,31 +8,24 @@ import br.com.fcte.sistema.models.AlunoEspecial;
 import br.com.fcte.sistema.models.Turma;
 import br.com.fcte.sistema.utils.FileManager;
 
-/**
- * Controlador para gerenciar operações relacionadas aos alunos.
- */
+// Controlador para gerenciar operações relacionadas aos alunos.
+ 
 public class AlunoController {
     private List<Aluno> alunos;
     private FileManager fileManager;
     
-    /**
-     * Inicializa uma nova instância do controlador de alunos.
-     */
+    // Inicializa uma nova instância do controlador de alunos.
+     
     public AlunoController() {
         this.alunos = new ArrayList<>();
         this.fileManager = new FileManager();
         carregarAlunos();
     }
     
-    /**
-     * Cadastra um novo aluno normal.
-     * 
-     * @param nome Nome do aluno
-     * @param id Identificador único do aluno
-     * @param matricula Número de matrícula do aluno
-     * @param curso Curso de graduação do aluno
-     * @return true se o cadastro foi bem-sucedido, false caso contrário
-     */
+    // Cadastra um novo aluno normal.
+     
+    //return true se o cadastro foi bem-sucedido, false caso contrário
+     
     public boolean cadastrarAluno(String nome, String id, String matricula, String curso) {
         // Verificar se já existe um aluno com a mesma matrícula
         if (buscarAlunoPorMatricula(matricula) != null) {
@@ -46,15 +39,9 @@ public class AlunoController {
         return true;
     }
     
-    /**
-     * Cadastra um novo aluno especial.
-     * 
-     * @param nome Nome do aluno
-     * @param id Identificador único do aluno
-     * @param matricula Número de matrícula do aluno
-     * @param curso Curso de graduação do aluno
-     * @return true se o cadastro foi bem-sucedido, false caso contrário
-     */
+    // Cadastra um novo aluno especial.
+    //return true se o cadastro foi bem-sucedido, false caso contrário
+     
     public boolean cadastrarAlunoEspecial(String nome, String id, String matricula, String curso) {
         // Verificar se já existe um aluno com a mesma matrícula
         if (buscarAlunoPorMatricula(matricula) != null) {
@@ -68,14 +55,8 @@ public class AlunoController {
         return true;
     }
     
-    /**
-     * Edita um aluno existente.
-     * 
-     * @param matricula Matrícula do aluno a ser editado
-     * @param nome Novo nome do aluno
-     * @param curso Novo curso do aluno
-     * @return true se a edição foi bem-sucedida, false caso contrário
-     */
+    // Edita um aluno existente.
+     
     public boolean editarAluno(String matricula, String nome, String curso) {
         Aluno aluno = buscarAlunoPorMatricula(matricula);
         if (aluno == null) {
@@ -88,22 +69,16 @@ public class AlunoController {
         return true;
     }
     
-    /**
-     * Lista todos os alunos cadastrados.
-     * 
-     * @return Lista de alunos cadastrados
-     */
+    // Lista todos os alunos cadastrados.
+    
     public List<Aluno> listarAlunos() {
         return new ArrayList<>(alunos);
     }
     
-    /**
-     * Matricula um aluno em uma turma.
-     * 
-     * @param matricula Matrícula do aluno
-     * @param turma Turma em que o aluno será matriculado
-     * @return Um array contendo um booleano indicando sucesso ou falha e uma mensagem
-     */
+    // Matricula um aluno em uma turma.
+
+    //return Um array contendo um booleano indicando sucesso ou falha e uma mensagem
+     
     public Object[] matricularAluno(String matricula, Turma turma) {
         Aluno aluno = buscarAlunoPorMatricula(matricula);
         if (aluno == null) {
@@ -117,13 +92,9 @@ public class AlunoController {
         return resultado;
     }
     
-    /**
-     * Tranca a matrícula de um aluno em uma disciplina.
-     * 
-     * @param matricula Matrícula do aluno
-     * @param turma Turma em que a matrícula será trancada
-     * @return Um array contendo um booleano indicando sucesso ou falha e uma mensagem
-     */
+    // Tranca a matrícula de um aluno em uma disciplina.
+    //return Um array contendo um booleano indicando sucesso ou falha e uma mensagem
+     
     public Object[] trancarDisciplina(String matricula, Turma turma) {
         Aluno aluno = buscarAlunoPorMatricula(matricula);
         if (aluno == null) {
@@ -137,12 +108,9 @@ public class AlunoController {
         return resultado;
     }
     
-    /**
-     * Tranca o semestre de um aluno.
-     * 
-     * @param matricula Matrícula do aluno
-     * @return Um array contendo um booleano indicando sucesso ou falha e uma mensagem
-     */
+    // Tranca o semestre de um aluno.
+    //return Um array contendo um booleano indicando sucesso ou falha e uma mensagem
+     
     public Object[] trancarSemestre(String matricula) {
         Aluno aluno = buscarAlunoPorMatricula(matricula);
         if (aluno == null) {
@@ -156,12 +124,9 @@ public class AlunoController {
         return resultado;
     }
     
-    /**
-     * Busca um aluno pelo número de matrícula.
-     * 
-     * @param matricula Número de matrícula do aluno
-     * @return O aluno encontrado ou null se não existir
-     */
+    // Busca um aluno pelo número de matrícula.
+    //return O aluno encontrado ou null se não existir
+     
     public Aluno buscarAlunoPorMatricula(String matricula) {
         for (Aluno aluno : alunos) {
             if (aluno.getMatricula().equals(matricula)) {
@@ -171,16 +136,14 @@ public class AlunoController {
         return null;
     }
     
-    /**
-     * Salva os dados dos alunos em arquivo.
-     */
+    // Salva os dados dos alunos em arquivo.
+     
     private void salvarAlunos() {
         fileManager.salvarAlunos(alunos);
     }
     
-    /**
-     * Carrega os dados dos alunos do arquivo.
-     */
+    // Carrega os dados dos alunos do arquivo.
+     
     private void carregarAlunos() {
         List<Aluno> alunosCarregados = fileManager.carregarAlunos();
         if (alunosCarregados != null) {
