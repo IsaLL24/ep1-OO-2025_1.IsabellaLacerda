@@ -1,6 +1,6 @@
 package br.com.fcte.sistema.models;
 
-//Interface que define o contrato para os diferentes tipos de avaliação.
+//Interface que define o contrato para os diferentes tipos de avaliação
  
 public interface Avaliacao {
     
