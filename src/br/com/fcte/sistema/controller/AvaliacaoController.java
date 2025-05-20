@@ -10,37 +10,23 @@ import br.com.fcte.sistema.models.AlunoEspecial;
 import br.com.fcte.sistema.models.Turma;
 import br.com.fcte.sistema.persistence.FileManager;
 
-/**
- * Controlador para gerenciar operações relacionadas às avaliações e frequências.
- */
+//Controlador para gerenciar operações relacionadas às avaliações e frequências.
+ 
 public class AvaliacaoController {
     private AlunoController alunoController;
     private DisciplinaController disciplinaController;
     private FileManager fileManager;
     
-    /**
-     * Inicializa uma nova instância do controlador de avaliações.
-     * 
-     * @param alunoController Controlador de alunos
-     * @param disciplinaController Controlador de disciplinas
-     */
+    // Inicializa uma nova instância do controlador de avaliações.
+     
     public AvaliacaoController(AlunoController alunoController, DisciplinaController disciplinaController) {
         this.alunoController = alunoController;
         this.disciplinaController = disciplinaController;
         this.fileManager = new FileManager();
     }
     
-    /**
-     * Lança uma nota para um aluno em uma turma.
-     * 
-     * @param matricula Matrícula do aluno
-     * @param codigoDisciplina Código da disciplina
-     * @param semestre Semestre da turma
-     * @param horario Horário da turma
-     * @param tipoNota Tipo de nota (P1, P2, P3, L, S)
-     * @param valor Valor da nota
-     * @return true se a nota foi lançada com sucesso, false caso contrário
-     */
+    // Lança uma nota para um aluno em uma turma.
+    
     public boolean lancarNota(String matricula, String codigoDisciplina, String semestre, 
                              String horario, String tipoNota, double valor) {
         // Buscar o aluno e a turma
@@ -60,17 +46,8 @@ public class AvaliacaoController {
         return turma.lancarNota(aluno, tipoNota, valor);
     }
     
-    /**
-     * Lança a frequência para um aluno em uma turma.
-     * 
-     * @param matricula Matrícula do aluno
-     * @param codigoDisciplina Código da disciplina
-     * @param semestre Semestre da turma
-     * @param horario Horário da turma
-     * @param aula Número da aula
-     * @param presente Se o aluno estava presente
-     * @return true se a frequência foi lançada com sucesso, false caso contrário
-     */
+    // Lança a frequência para um aluno em uma turma.
+     
     public boolean lancarFrequencia(String matricula, String codigoDisciplina, String semestre, 
                                    String horario, int aula, boolean presente) {
         // Buscar o aluno e a turma
@@ -85,15 +62,8 @@ public class AvaliacaoController {
         return turma.lancarFrequencia(aluno, aula, presente);
     }
     
-    /**
-     * Calcula a média final de um aluno em uma turma.
-     * 
-     * @param matricula Matrícula do aluno
-     * @param codigoDisciplina Código da disciplina
-     * @param semestre Semestre da turma
-     * @param horario Horário da turma
-     * @return Média final do aluno ou -1 se não for possível calcular
-     */
+    // Calcula a média final de um aluno em uma turma.
+     
     public double calcularMediaFinal(String matricula, String codigoDisciplina, String semestre, String horario) {
         // Buscar o aluno e a turma
         Aluno aluno = alunoController.buscarAlunoPorMatricula(matricula);
@@ -107,15 +77,8 @@ public class AvaliacaoController {
         return turma.calcularMediaFinal(aluno);
     }
     
-    /**
-     * Calcula a frequência de um aluno em uma turma.
-     * 
-     * @param matricula Matrícula do aluno
-     * @param codigoDisciplina Código da disciplina
-     * @param semestre Semestre da turma
-     * @param horario Horário da turma
-     * @return Percentual de frequência do aluno ou -1 se não for possível calcular
-     */
+    // Calcula a frequência de um aluno em uma turma.
+
     public double calcularFrequencia(String matricula, String codigoDisciplina, String semestre, String horario) {
         // Buscar o aluno e a turma
         Aluno aluno = alunoController.buscarAlunoPorMatricula(matricula);
@@ -129,15 +92,8 @@ public class AvaliacaoController {
         return turma.calcularFrequencia(aluno);
     }
     
-    /**
-     * Verifica se o aluno foi aprovado em uma turma.
-     * 
-     * @param matricula Matrícula do aluno
-     * @param codigoDisciplina Código da disciplina
-     * @param semestre Semestre da turma
-     * @param horario Horário da turma
-     * @return "aprovado", "reprovado por nota", "reprovado por falta" ou mensagem de erro
-     */
+    //Verifica se o aluno foi aprovado em uma turma.
+    
     public String verificarAprovacao(String matricula, String codigoDisciplina, String semestre, String horario) {
         // Buscar o aluno e a turma
         Aluno aluno = alunoController.buscarAlunoPorMatricula(matricula);
@@ -151,14 +107,8 @@ public class AvaliacaoController {
         return turma.verificarAprovacao(aluno);
     }
     
-    /**
-     * Gera um relatório por turma.
-     * 
-     * @param codigoDisciplina Código da disciplina
-     * @param semestre Semestre da turma
-     * @param horario Horário da turma
-     * @return Relatório da turma ou null se a turma não existir
-     */
+    // Gera um relatório por turma.
+     
     public String gerarRelatorioPorTurma(String codigoDisciplina, String semestre, String horario) {
         Turma turma = disciplinaController.buscarTurma(codigoDisciplina, semestre, horario);
         if (turma == null) {
@@ -194,12 +144,8 @@ public class AvaliacaoController {
         return relatorio.toString();
     }
     
-    /**
-     * Gera um relatório por disciplina.
-     * 
-     * @param codigoDisciplina Código da disciplina
-     * @return Relatório da disciplina ou null se a disciplina não existir
-     */
+    // Gera um relatório por disciplina.
+    
     public String gerarRelatorioPorDisciplina(String codigoDisciplina) {
         // Buscar a disciplina
         if (disciplinaController.buscarDisciplinaPorCodigo(codigoDisciplina) == null) {
@@ -230,12 +176,8 @@ public class AvaliacaoController {
         return relatorio.toString();
     }
     
-    /**
-     * Gera um relatório por professor.
-     * 
-     * @param professor Nome do professor
-     * @return Relatório do professor
-     */
+    // Gera um relatório por professor.
+     
     public String gerarRelatorioPorProfessor(String professor) {
         // Buscar as turmas do professor
         List<Turma> turmasProfessor = disciplinaController.listarTurmasPorProfessor(professor);
@@ -260,14 +202,8 @@ public class AvaliacaoController {
         return relatorio.toString();
     }
     
-    /**
-     * Gera o boletim de um aluno.
-     * 
-     * @param matricula Matrícula do aluno
-     * @param semestre Semestre específico ou null para todos
-     * @param incluirDadosTurma Se deve incluir os dados da turma
-     * @return Boletim do aluno ou null se o aluno não existir
-     */
+    // Gera o boletim de um aluno.
+     
     public String gerarBoletimAluno(String matricula, String semestre, boolean incluirDadosTurma) {
         // Buscar o aluno
         Aluno aluno = alunoController.buscarAlunoPorMatricula(matricula);
