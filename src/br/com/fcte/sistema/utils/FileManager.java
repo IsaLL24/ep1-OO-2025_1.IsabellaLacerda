@@ -5,18 +5,16 @@ import br.com.fcte.sistema.models.*;
 import java.io.*;
 import java.util.*;
 
-/**
- * Classe utilitária para gerenciar a persistência em arquivos.
- */
+// Classe utilitária para gerenciar a persistência em arquivos.
+ 
 public class FileManager {
     private static final String DATA_DIR = "data/";
     private static final String ALUNOS_FILE = DATA_DIR + "alunos.csv";
     private static final String DISCIPLINAS_FILE = DATA_DIR + "disciplinas.csv";
     private static final String TURMAS_FILE = DATA_DIR + "turmas.csv";
     
-    /**
-     * Construtor que garante a existência do diretório de dados.
-     */
+    // Construtor que garante a existência do diretório de dados.
+     
     public FileManager() {
         // Garantir que o diretório de dados existe
         File dataDir = new File(DATA_DIR);
@@ -25,11 +23,8 @@ public class FileManager {
         }
     }
     
-    /**
-     * Salva a lista de alunos em arquivo.
-     * 
-     * @param alunos Lista de alunos a ser salva
-     */
+    // Salva a lista de alunos em arquivo.
+     
     public void salvarAlunos(List<Aluno> alunos) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(ALUNOS_FILE))) {
             // Escrever cabeçalho
@@ -47,11 +42,8 @@ public class FileManager {
         }
     }
     
-    /**
-     * Carrega a lista de alunos do arquivo.
-     * 
-     * @return Lista de alunos carregada ou lista vazia se o arquivo não existir
-     */
+    // Carrega a lista de alunos do arquivo.
+     
     public List<Aluno> carregarAlunos() {
         List<Aluno> alunos = new ArrayList<>();
         File file = new File(ALUNOS_FILE);
@@ -92,11 +84,8 @@ public class FileManager {
         return alunos;
     }
     
-    /**
-     * Salva a lista de disciplinas em arquivo.
-     * 
-     * @param disciplinas Lista de disciplinas a ser salva
-     */
+    // Salva a lista de disciplinas em arquivo.
+     
     public void salvarDisciplinas(List<Disciplina> disciplinas) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(DISCIPLINAS_FILE))) {
             // Escrever cabeçalho
@@ -121,11 +110,8 @@ public class FileManager {
         }
     }
     
-    /**
-     * Carrega a lista de disciplinas do arquivo.
-     * 
-     * @return Lista de disciplinas carregada ou lista vazia se o arquivo não existir
-     */
+    // Carrega a lista de disciplinas do arquivo.
+     
     public List<Disciplina> carregarDisciplinas() {
         List<Disciplina> disciplinas = new ArrayList<>();
         Map<String, Disciplina> disciplinasMap = new HashMap<>();
@@ -179,11 +165,8 @@ public class FileManager {
         return disciplinas;
     }
     
-    /**
-     * Salva a lista de turmas em arquivo.
-     * 
-     * @param turmas Lista de turmas a ser salva
-     */
+    // Salva a lista de turmas em arquivo.
+     
     public void salvarTurmas(List<Turma> turmas) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(TURMAS_FILE))) {
             // Escrever cabeçalho
@@ -202,11 +185,8 @@ public class FileManager {
         }
     }
     
-    /**
-     * Carrega a lista de turmas do arquivo.
-     * 
-     * @return Lista de turmas carregada ou lista vazia se o arquivo não existir
-     */
+    // Carrega a lista de turmas do arquivo.
+     
     public List<Turma> carregarTurmas() {
         List<Turma> turmas = new ArrayList<>();
         File file = new File(TURMAS_FILE);
