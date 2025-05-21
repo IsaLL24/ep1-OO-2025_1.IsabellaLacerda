@@ -1,12 +1,12 @@
-package br.com.fcte.sistema.controller;
+package src.br.com.fcte.sistema.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.fcte.sistema.models.Aluno;
-import br.com.fcte.sistema.models.AlunoEspecial;
-import br.com.fcte.sistema.models.Turma;
-import br.com.fcte.sistema.utils.FileManager;
+import src.br.com.fcte.sistema.models.Aluno;
+import src.br.com.fcte.sistema.models.AlunoEspecial;
+import src.br.com.fcte.sistema.models.Turma;
+import src.br.com.fcte.sistema.utils.FileManager;
 
 // Controlador para gerenciar operações relacionadas aos alunos.
  

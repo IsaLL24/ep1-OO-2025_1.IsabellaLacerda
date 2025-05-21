@@ -1,4 +1,4 @@
-package br.com.fcte.sistema.models;
+package src.br.com.fcte.sistema.models;
 
 public class Pessoa {
 	private String nome;

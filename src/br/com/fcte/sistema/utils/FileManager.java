@@ -1,6 +1,6 @@
-package br.com.fcte.sistema.utils;
+package src.br.com.fcte.sistema.utils;
 
-import br.com.fcte.sistema.models.*;
+import src.br.com.fcte.sistema.models.*;
 
 import java.io.*;
 import java.util.*;

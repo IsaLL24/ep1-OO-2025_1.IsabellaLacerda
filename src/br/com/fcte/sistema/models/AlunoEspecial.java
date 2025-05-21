@@ -1,4 +1,4 @@
-package br.com.fcte.sistema.models;
+package src.br.com.fcte.sistema.models;
 
 // Classe que representa um aluno especial no sistema acadêmico.
 // Alunos especiais podem cursar no máximo 2 disciplinas e não recebem notas, apenas presença.

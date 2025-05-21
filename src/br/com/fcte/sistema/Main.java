@@ -1,14 +1,13 @@
-package br.com.fcte.sistema;
-
-import br.com.fcte.sistema.controller.AlunoController;
-import br.com.fcte.sistema.controller.AvaliacaoController;
-import br.com.fcte.sistema.controller.DisciplinaController;
-import br.com.fcte.sistema.models.Aluno;
-import br.com.fcte.sistema.models.Disciplina;
-import br.com.fcte.sistema.models.Turma;
-import br.com.fcte.sistema.utils.Menu;
+package src.br.com.fcte.sistema;
 
 import java.util.List;
+import src.br.com.fcte.sistema.controller.AlunoController;
+import src.br.com.fcte.sistema.controller.AvaliacaoController;
+import src.br.com.fcte.sistema.controller.DisciplinaController;
+import src.br.com.fcte.sistema.models.Aluno;
+import src.br.com.fcte.sistema.models.Disciplina;
+import src.br.com.fcte.sistema.models.Turma;
+import src.br.com.fcte.sistema.utils.Menu;
 
 // Classe principal do sistema acadêmico.
  
@@ -107,19 +106,19 @@ public class Main {
                     adicionarPreRequisito();
                     break;
                 case 3:
-                    criarTurma();
+//                    criarTurma();
                     break;
                 case 4:
-                    listarDisciplinas();
+//                    listarDisciplinas();
                     break;
                 case 5:
-                    listarTurmas();
+//                    listarTurmas();
                     break;
                 case 6:
-                    listarTurmasPorDisciplina();
+//                    listarTurmasPorDisciplina();
                     break;
                 case 7:
-                    listarTurmasPorProfessor();
+//                    listarTurmasPorProfessor();
                     break;
                 case 0:
                     voltar = true;
@@ -138,31 +137,31 @@ public class Main {
             
             switch (opcao) {
                 case 1:
-                    lancarNota();
+//                    lancarNota();
                     break;
                 case 2:
-                    lancarFrequencia();
+//                    lancarFrequencia();
                     break;
                 case 3:
-                    calcularMediaFinal();
+//                    calcularMediaFinal();
                     break;
                 case 4:
-                    calcularFrequencia();
+//                    calcularFrequencia();
                     break;
                 case 5:
-                    verificarAprovacao();
+//                    verificarAprovacao();
                     break;
                 case 6:
-                    gerarRelatorioPorTurma();
+//                    gerarRelatorioPorTurma();
                     break;
                 case 7:
-                    gerarRelatorioPorDisciplina();
+//                    gerarRelatorioPorDisciplina();
                     break;
                 case 8:
-                    gerarRelatorioPorProfessor();
+//                    gerarRelatorioPorProfessor();
                     break;
                 case 9:
-                    gerarBoletimAluno();
+//                    gerarBoletimAluno();
                     break;
                 case 0:
                     voltar = true;
@@ -445,4 +444,8 @@ public class Main {
                 
                 if (sucesso) {
                     System.out.println("Content truncated due to size limit. Use line ranges to read in chunks");
-                    }
+                }
+            }
+        }
+    }
+}

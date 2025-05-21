@@ -1,11 +1,11 @@
-package br.com.fcte.sistema.controller;
+package src.br.com.fcte.sistema.controller;
 
-import br.com.fcte.sistema.models.Disciplina;
-import br.com.fcte.sistema.models.Turma;
-import br.com.fcte.sistema.utils.FileManager;
-import br.com.fcte.sistema.models.Avaliacao;
-import br.com.fcte.sistema.models.AvaliacaoA;
-import br.com.fcte.sistema.models.AvaliacaoB;
+import src.br.com.fcte.sistema.models.Disciplina;
+import src.br.com.fcte.sistema.models.Turma;
+import src.br.com.fcte.sistema.utils.FileManager;
+import src.br.com.fcte.sistema.models.Avaliacao;
+import src.br.com.fcte.sistema.models.AvaliacaoA;
+import src.br.com.fcte.sistema.models.AvaliacaoB;
 
 import java.util.ArrayList;
 import java.util.List;

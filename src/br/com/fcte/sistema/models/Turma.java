@@ -1,4 +1,4 @@
-package br.com.fcte.sistema.models;
+package src.br.com.fcte.sistema.models;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -80,7 +80,7 @@ public class Turma {
         return formaAvaliacao;
     }
     
-    / Define a forma de avaliação da turma.
+    // Define a forma de avaliação da turma.
     
     public void setFormaAvaliacao(Avaliacao formaAvaliacao) {
         this.formaAvaliacao = formaAvaliacao;

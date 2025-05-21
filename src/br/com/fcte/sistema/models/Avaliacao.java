@@ -1,4 +1,4 @@
-package br.com.fcte.sistema.models;
+package src.br.com.fcte.sistema.models;
 
 //Interface que define o contrato para os diferentes tipos de avaliação
  

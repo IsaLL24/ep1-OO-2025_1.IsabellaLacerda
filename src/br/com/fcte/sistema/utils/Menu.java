@@ -1,4 +1,4 @@
-package br.com.fcte.sistema.utils;
+package src.br.com.fcte.sistema.utils;
 
 import java.util.Scanner;
 
