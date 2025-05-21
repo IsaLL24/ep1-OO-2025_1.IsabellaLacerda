@@ -10,9 +10,8 @@ import br.com.fcte.sistema.utils.Menu;
 
 import java.util.List;
 
-/**
- * Classe principal do sistema acadêmico.
- */
+// Classe principal do sistema acadêmico.
+ 
 public class Main {
     private static AlunoController alunoController;
     private static DisciplinaController disciplinaController;
@@ -55,9 +54,8 @@ public class Main {
         menu.fechar();
     }
     
-    /**
-     * Executa o modo aluno.
-     */
+    // Executa o modo aluno.
+     
     private static void modoAluno() {
         boolean voltar = false;
         
@@ -93,9 +91,8 @@ public class Main {
         }
     }
     
-    /**
-     * Executa o modo disciplina/turma.
-     */
+    // Executa o modo disciplina/turma.
+     
     private static void modoDisciplina() {
         boolean voltar = false;
         
@@ -131,9 +128,8 @@ public class Main {
         }
     }
     
-    /**
-     * Executa o modo avaliação/frequência.
-     */
+    // Executa o modo avaliação/frequência.
+     
     private static void modoAvaliacao() {
         boolean voltar = false;
         
@@ -177,9 +173,8 @@ public class Main {
     
     // Métodos do modo aluno
     
-    /**
-     * Cadastra um aluno normal.
-     */
+    // Cadastra um aluno normal
+    
     private static void cadastrarAlunoNormal() {
         System.out.println("\n=== Cadastrar Aluno Normal ===");
         
@@ -199,9 +194,8 @@ public class Main {
         menu.pressionarEnter("\nPressione Enter para continuar...");
     }
     
-    /**
-     * Cadastra um aluno especial.
-     */
+    // Cadastra um aluno especial.
+     
     private static void cadastrarAlunoEspecial() {
         System.out.println("\n=== Cadastrar Aluno Especial ===");
         
@@ -221,9 +215,8 @@ public class Main {
         menu.pressionarEnter("\nPressione Enter para continuar...");
     }
     
-    /**
-     * Edita um aluno existente.
-     */
+    // Edita um aluno existente.
+     
     private static void editarAluno() {
         System.out.println("\n=== Editar Aluno ===");
         
@@ -257,9 +250,8 @@ public class Main {
         menu.pressionarEnter("\nPressione Enter para continuar...");
     }
     
-    /**
-     * Lista todos os alunos cadastrados.
-     */
+    // Lista todos os alunos cadastrados.
+     
     private static void listarAlunos() {
         System.out.println("\n=== Lista de Alunos ===");
         
@@ -277,9 +269,8 @@ public class Main {
         menu.pressionarEnter("\nPressione Enter para continuar...");
     }
     
-    /**
-     * Matricula um aluno em uma disciplina.
-     */
+    // Matricula um aluno em uma disciplina.
+     
     private static void matricularAluno() {
         System.out.println("\n=== Matricular Aluno em Disciplina ===");
         
@@ -325,9 +316,8 @@ public class Main {
         menu.pressionarEnter("\nPressione Enter para continuar...");
     }
     
-    /**
-     * Tranca a matrícula de um aluno em uma disciplina.
-     */
+    //Tranca a matrícula de um aluno em uma disciplina.
+     
     private static void trancarDisciplina() {
         System.out.println("\n=== Trancar Disciplina ===");
         
@@ -375,9 +365,8 @@ public class Main {
         menu.pressionarEnter("\nPressione Enter para continuar...");
     }
     
-    /**
-     * Tranca o semestre de um aluno.
-     */
+    //Tranca o semestre de um aluno.
+     
     private static void trancarSemestre() {
         System.out.println("\n=== Trancar Semestre ===");
         
@@ -411,9 +400,8 @@ public class Main {
     
     // Métodos do modo disciplina/turma
     
-    /**
-     * Cadastra uma nova disciplina.
-     */
+    // Cadastra uma nova disciplina.
+     
     private static void cadastrarDisciplina() {
         System.out.println("\n=== Cadastrar Disciplina ===");
         
@@ -432,9 +420,8 @@ public class Main {
         menu.pressionarEnter("\nPressione Enter para continuar...");
     }
     
-    /**
-     * Adiciona um pré-requisito a uma disciplina.
-     */
+    // Adiciona um pré-requisito a uma disciplina.
+     
     private static void adicionarPreRequisito() {
         System.out.println("\n=== Adicionar Pré-requisito ===");
         
