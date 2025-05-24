@@ -18,9 +18,8 @@ public class DisciplinaController {
     private List<Turma> turmas;
     private FileManager fileManager;
     
-    /**
-     * Inicializa uma nova instância do controlador de disciplinas.
-     */
+    // Inicializa uma nova instância do controlador de disciplinas.
+     
     public DisciplinaController() {
         this.disciplinas = new ArrayList<>();
         this.turmas = new ArrayList<>();
@@ -29,14 +28,8 @@ public class DisciplinaController {
         carregarTurmas();
     }
     
-    /**
-     * Cadastra uma nova disciplina.
-     * 
-     * @param codigo Código da disciplina
-     * @param nome Nome da disciplina
-     * @param cargaHoraria Carga horária em horas
-     * @return true se o cadastro foi bem-sucedido, false caso contrário
-     */
+    // Cadastra uma nova disciplina.
+     
     public boolean cadastrarDisciplina(String codigo, String nome, int cargaHoraria) {
         // Verificar se já existe uma disciplina com o mesmo código
         if (buscarDisciplinaPorCodigo(codigo) != null) {
@@ -50,13 +43,8 @@ public class DisciplinaController {
         return true;
     }
     
-    /**
-     * Adiciona um pré-requisito a uma disciplina.
-     * 
-     * @param codigoDisciplina Código da disciplina
-     * @param codigoPreRequisito Código do pré-requisito
-     * @return true se a adição foi bem-sucedida, false caso contrário
-     */
+    // Adiciona um pré-requisito a uma disciplina.
+     
     public boolean adicionarPreRequisito(String codigoDisciplina, String codigoPreRequisito) {
         Disciplina disciplina = buscarDisciplinaPorCodigo(codigoDisciplina);
         Disciplina preRequisito = buscarDisciplinaPorCodigo(codigoPreRequisito);
@@ -70,19 +58,8 @@ public class DisciplinaController {
         return true;
     }
     
-    /**
-     * Cria uma nova turma.
-     * 
-     * @param codigoDisciplina Código da disciplina
-     * @param professor Professor responsável
-     * @param semestre Semestre (ex: "2025.1")
-     * @param tipoAvaliacao Tipo de avaliação ("A" ou "B")
-     * @param remota Se é remota ou presencial
-     * @param sala Sala (null se for remota)
-     * @param horario Horário das aulas
-     * @param capacidade Capacidade máxima de alunos
-     * @return true se a criação foi bem-sucedida, false caso contrário
-     */
+    // Cria uma nova turma.
+     
     public boolean criarTurma(String codigoDisciplina, String professor, String semestre,
                              String tipoAvaliacao, boolean remota, String sala,
                              String horario, int capacidade) {
@@ -117,30 +94,20 @@ public class DisciplinaController {
         return true;
     }
     
-    /**
-     * Lista todas as disciplinas cadastradas.
-     * 
-     * @return Lista de disciplinas cadastradas
-     */
+    // Lista todas as disciplinas cadastradas.
+     
     public List<Disciplina> listarDisciplinas() {
         return new ArrayList<>(disciplinas);
     }
     
-    /**
-     * Lista todas as turmas disponíveis.
-     * 
-     * @return Lista de turmas disponíveis
-     */
+    // Lista todas as turmas disponíveis.
+    
     public List<Turma> listarTurmas() {
         return new ArrayList<>(turmas);
     }
     
-    /**
-     * Lista as turmas de uma disciplina específica.
-     * 
-     * @param codigoDisciplina Código da disciplina
-     * @return Lista de turmas da disciplina
-     */
+    // Lista as turmas de uma disciplina específica.
+     
     public List<Turma> listarTurmasPorDisciplina(String codigoDisciplina) {
         List<Turma> turmasDisciplina = new ArrayList<>();
         for (Turma turma : turmas) {
@@ -151,12 +118,8 @@ public class DisciplinaController {
         return turmasDisciplina;
     }
     
-    /**
-     * Lista as turmas de um professor específico.
-     * 
-     * @param professor Nome do professor
-     * @return Lista de turmas do professor
-     */
+    // Lista as turmas de um professor específico.
+     
     public List<Turma> listarTurmasPorProfessor(String professor) {
         List<Turma> turmasProfessor = new ArrayList<>();
         for (Turma turma : turmas) {
@@ -167,12 +130,8 @@ public class DisciplinaController {
         return turmasProfessor;
     }
     
-    /**
-     * Busca uma disciplina pelo código.
-     * 
-     * @param codigo Código da disciplina
-     * @return A disciplina encontrada ou null se não existir
-     */
+    // Busca uma disciplina pelo código.
+    
     public Disciplina buscarDisciplinaPorCodigo(String codigo) {
         for (Disciplina disciplina : disciplinas) {
             if (disciplina.getCodigo().equals(codigo)) {
@@ -182,14 +141,8 @@ public class DisciplinaController {
         return null;
     }
     
-    /**
-     * Busca uma turma pelo código da disciplina, semestre e horário.
-     * 
-     * @param codigoDisciplina Código da disciplina
-     * @param semestre Semestre da turma
-     * @param horario Horário da turma
-     * @return A turma encontrada ou null se não existir
-     */
+    // Busca uma turma pelo código da disciplina, semestre e horário.
+     
     public Turma buscarTurma(String codigoDisciplina, String semestre, String horario) {
         for (Turma turma : turmas) {
             if (turma.getDisciplina().getCodigo().equals(codigoDisciplina) &&
@@ -201,16 +154,14 @@ public class DisciplinaController {
         return null;
     }
     
-    /**
-     * Salva os dados das disciplinas em arquivo.
-     */
+    // Salva os dados das disciplinas em arquivo.
+     
     private void salvarDisciplinas() {
         fileManager.salvarDisciplinas(disciplinas);
     }
     
-    /**
-     * Carrega os dados das disciplinas do arquivo.
-     */
+    // Carrega os dados das disciplinas do arquivo.
+     
     private void carregarDisciplinas() {
         List<Disciplina> disciplinasCarregadas = fileManager.carregarDisciplinas();
         if (disciplinasCarregadas != null) {
@@ -218,16 +169,14 @@ public class DisciplinaController {
         }
     }
     
-    /**
-     * Salva os dados das turmas em arquivo.
-     */
+    // Salva os dados das turmas em arquivo.
+     
     private void salvarTurmas() {
         fileManager.salvarTurmas(turmas);
     }
     
-    /**
-     * Carrega os dados das turmas do arquivo.
-     */
+    // Carrega os dados das turmas do arquivo.
+     
     private void carregarTurmas() {
         List<Turma> turmasCarregadas = fileManager.carregarTurmas();
         if (turmasCarregadas != null) {
