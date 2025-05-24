@@ -24,7 +24,7 @@ public class AvaliacaoB implements Avaliacao {
             return -1;
         }
         
-        // Calcular a média
+        // Calcular a média.
         return (notas.get("P1") + notas.get("P2") * 2 + notas.get("P3") * 3 + 
                 notas.get("L") + notas.get("S")) / 8.0;
     }
