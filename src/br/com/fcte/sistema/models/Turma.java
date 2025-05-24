@@ -38,7 +38,7 @@ public class Turma {
         this.frequencia = new HashMap<>();
     }
     
-    // Retorna a disciplina da turma.
+    // Retorna a disciplina da turma
      
     public Disciplina getDisciplina() {
         return disciplina;
