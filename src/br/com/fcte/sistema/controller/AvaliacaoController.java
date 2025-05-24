@@ -73,7 +73,7 @@ public class AvaliacaoController {
             return -1;
         }
         
-        // Calcular a média
+        // Calcular a média.
         return turma.calcularMediaFinal(aluno);
     }
     
