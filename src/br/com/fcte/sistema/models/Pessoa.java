@@ -6,8 +6,8 @@ public class Pessoa {
 
      // Inicializa uma nova instância da classe Pessoa.
      
-     //nome Nome da pessoa
-     //id Identificador único da pessoa
+     //nome Nome da pessoa.
+     //id Identificador único da pessoa.
      
     public Pessoa(String nome, String id) {
         this.nome = nome;
