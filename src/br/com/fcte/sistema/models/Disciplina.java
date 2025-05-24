@@ -23,7 +23,7 @@ public class Disciplina {
         this.preRequisitos = new ArrayList<>();
     }
     
-    // Retorna o código da disciplina
+    // Retorna o código da disciplina.
      
     public String getCodigo() {
         return codigo;
