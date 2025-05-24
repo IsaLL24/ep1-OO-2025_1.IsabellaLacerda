@@ -8,7 +8,7 @@ import src.br.com.fcte.sistema.models.AlunoEspecial;
 import src.br.com.fcte.sistema.models.Turma;
 import src.br.com.fcte.sistema.utils.FileManager;
 
-// Controlador para gerenciar operações relacionadas aos alunos.
+// Controlador para gerenciar operações relacionadas aos alunos
  
 public class AlunoController {
     private List<Aluno> alunos;
