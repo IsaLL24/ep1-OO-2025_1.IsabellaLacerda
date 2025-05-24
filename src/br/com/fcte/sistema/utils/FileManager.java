@@ -5,7 +5,7 @@ import src.br.com.fcte.sistema.models.*;
 import java.io.*;
 import java.util.*;
 
-// Classe utilitária para gerenciar a persistência em arquivos.
+// Classe utilitária para gerenciar a persistência em arquivos
  
 public class FileManager {
     private static final String DATA_DIR = "data/";
