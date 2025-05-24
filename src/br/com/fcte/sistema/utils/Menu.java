@@ -2,24 +2,19 @@ package src.br.com.fcte.sistema.utils;
 
 import java.util.Scanner;
 
-/**
- * Classe utilitária para gerenciar os menus do sistema.
- */
+// Classe utilitária para gerenciar os menus do sistema.
+ 
 public class Menu {
     private Scanner scanner;
     
-    /**
-     * Inicializa uma nova instância da classe Menu.
-     */
+    // Inicializa uma nova instância da classe Menu.
+     
     public Menu() {
         this.scanner = new Scanner(System.in);
     }
     
-    /**
-     * Exibe o menu principal e retorna a opção selecionada.
-     * 
-     * @return Opção selecionada
-     */
+    // Exibe o menu principal e retorna a opção selecionada.
+     
     public int exibirMenuPrincipal() {
         System.out.println("\n===== SISTEMA ACADÊMICO FCTE =====");
         System.out.println("1. Modo Aluno");
@@ -31,11 +26,8 @@ public class Menu {
         return lerOpcao(0, 3);
     }
     
-    /**
-     * Exibe o menu do modo aluno e retorna a opção selecionada.
-     * 
-     * @return Opção selecionada
-     */
+    // Exibe o menu do modo aluno e retorna a opção selecionada.
+     
     public int exibirMenuAluno() {
         System.out.println("\n===== MODO ALUNO =====");
         System.out.println("1. Cadastrar aluno normal");
@@ -51,11 +43,8 @@ public class Menu {
         return lerOpcao(0, 7);
     }
     
-    /**
-     * Exibe o menu do modo disciplina/turma e retorna a opção selecionada.
-     * 
-     * @return Opção selecionada
-     */
+    // Exibe o menu do modo disciplina/turma e retorna a opção selecionada.
+     
     public int exibirMenuDisciplina() {
         System.out.println("\n===== MODO DISCIPLINA/TURMA =====");
         System.out.println("1. Cadastrar disciplina");
@@ -71,11 +60,8 @@ public class Menu {
         return lerOpcao(0, 7);
     }
     
-    /**
-     * Exibe o menu do modo avaliação/frequência e retorna a opção selecionada.
-     * 
-     * @return Opção selecionada
-     */
+    // Exibe o menu do modo avaliação/frequência e retorna a opção selecionada.
+   
     public int exibirMenuAvaliacao() {
         System.out.println("\n===== MODO AVALIAÇÃO/FREQUÊNCIA =====");
         System.out.println("1. Lançar nota");
@@ -93,13 +79,8 @@ public class Menu {
         return lerOpcao(0, 9);
     }
     
-    /**
-     * Lê uma opção do usuário dentro de um intervalo válido.
-     * 
-     * @param min Valor mínimo válido
-     * @param max Valor máximo válido
-     * @return Opção selecionada
-     */
+    // Lê uma opção do usuário dentro de um intervalo válido.
+     
     public int lerOpcao(int min, int max) {
         int opcao = -1;
         boolean opcaoValida = false;
@@ -120,23 +101,15 @@ public class Menu {
         return opcao;
     }
     
-    /**
-     * Lê uma string do usuário.
-     * 
-     * @param mensagem Mensagem a ser exibida
-     * @return String lida
-     */
+    // Lê uma string do usuário.
+     
     public String lerString(String mensagem) {
         System.out.print(mensagem);
         return scanner.nextLine();
     }
     
-    /**
-     * Lê um inteiro do usuário.
-     * 
-     * @param mensagem Mensagem a ser exibida
-     * @return Inteiro lido
-     */
+    // Lê um inteiro do usuário.
+    
     public int lerInteiro(String mensagem) {
         int valor = 0;
         boolean valorValido = false;
@@ -154,12 +127,8 @@ public class Menu {
         return valor;
     }
     
-    /**
-     * Lê um double do usuário.
-     * 
-     * @param mensagem Mensagem a ser exibida
-     * @return Double lido
-     */
+    // Lê um double do usuário.
+     
     public double lerDouble(String mensagem) {
         double valor = 0;
         boolean valorValido = false;
@@ -177,12 +146,8 @@ public class Menu {
         return valor;
     }
     
-    /**
-     * Lê um booleano do usuário (S/N).
-     * 
-     * @param mensagem Mensagem a ser exibida
-     * @return Booleano lido
-     */
+    // Lê um booleano do usuário (S/N).
+    
     public boolean lerBooleano(String mensagem) {
         System.out.print(mensagem + " (S/N): ");
         String resposta = scanner.nextLine().trim().toUpperCase();
@@ -195,19 +160,15 @@ public class Menu {
         return resposta.equals("S");
     }
     
-    /**
-     * Exibe uma mensagem e aguarda o usuário pressionar Enter.
-     * 
-     * @param mensagem Mensagem a ser exibida
-     */
+    // Exibe uma mensagem e aguarda o usuário pressionar Enter.
+    
     public void pressionarEnter(String mensagem) {
         System.out.print(mensagem);
         scanner.nextLine();
     }
     
-    /**
-     * Fecha o scanner.
-     */
+    // Fecha o scanner.
+     
     public void fechar() {
         scanner.close();
     }
