@@ -47,7 +47,6 @@ public class Aluno extends Pessoa {
     }
     
     // Define o curso de graduação do aluno.
-    // curso Novo curso de graduação do aluno
   
     public void setCurso(String curso) {
         this.curso = curso;
