@@ -5,7 +5,7 @@ package src.br.com.fcte.sistema.models;
  
 public class AlunoEspecial extends Aluno {
     
-    // Inicializa uma nova instância da classe AlunoEspecial.
+    // Inicializa uma nova instância da classe AlunoEspecial.\
      
     public AlunoEspecial(String nome, String id, String matricula, String curso) {
         super(nome, id, matricula, curso);
