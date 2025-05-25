@@ -12,7 +12,7 @@ O enunciado do trabalho pode ser encontrado aqui:
 - **Nome completo:** Isabella Lacerda Lima
 - **Matrícula:** 232003269
 - **Curso:** Engenharia de Software
-- **Turma:** [Preencher aqui]
+- **Turma:** 06
 
 ---
 
@@ -41,7 +41,7 @@ O enunciado do trabalho pode ser encontrado aqui:
 ## Prints da Execução
 
 1. Menu Principal:  
-   ![Inserir Print 1](caminho/do/print1.png)
+<img width="1280" alt="print:menu" src="https://github.com/user-attachments/assets/76248e68-37bb-43a2-9336-f380ea5b5922" />
 
 2. Cadastro de Aluno:  
    ![Inserir Print 2](caminho/do/print2.png)
