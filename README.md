@@ -19,22 +19,27 @@ O enunciado do trabalho pode ser encontrado aqui:
 ## Instruções para Compilação e Execução
 
 1. **Compilação:**
-
-   javac Main.java
+  javac Main.java
    
 3. **Execução:**  
    java Main
 
 4. **Estrutura de Pastas:**  
-Estrutura de Pastas:
--src/: Contém todo o código-fonte do projeto, organizado em pacotes.
-    -br/com/fcte/sistema/: Pacote principal.
-      -controller/: Contém as classes controladoras (AlunoController, AvaliacaoController, DisciplinaController).
-      -models/: Contém as classes de modelo de dados (Pessoa, Aluno, Disciplina, Turma, Avaliacao, etc.).
-      -utils/: Contém classes utilitárias (FileManager, Menu).
-  -Main.java: Classe principal que inicia o sistema.
--bin/: Diretório onde os arquivos .class compilados serão armazenados (criado durante a compilação).
--data/: Diretório onde os arquivos de dados (.csv) são salvos e carregados pelo FileManager (criado durante a compilação ou na primeira execução que salva dados).
+├── src/
+│   ├── br/com/fcte/sistema/          # Pacote principal do sistema
+│   │   ├── controller/              # Controladores responsáveis pela lógica (AlunoController, AvaliacaoController, DisciplinaController)
+│   │   ├── model/                   # Classes de modelo de dados (Pessoa, Aluno, Disciplina, Turma, Avaliacao)
+│   │   ├── utils/                   # Classes utilitárias (FileManager, Menu)
+│   │   ├── Main.java                # Classe principal que inicia o sistema
+│
+├── bin/                             # Diretório onde os arquivos .class compilados serão armazenados (criado durante a compilação)
+│
+├── data/                            # Diretório para arquivos de dados (.csv) utilizados pelo sistema (gerados/salvos pelo FileManager)
+│
+├── .classpath                       # Arquivo de configuração do projeto (gerado pelo Eclipse)
+├── .gitignore                       # Arquivo para ignorar arquivos/pastas no controle de versão
+├── .project                         # Arquivo de configuração do Eclipse
+├── README.md                        # Arquivo de instruções e documentação do projeto
 
 3. **Versão do JAVA utilizada:**  
    JRE (23.0.2)
