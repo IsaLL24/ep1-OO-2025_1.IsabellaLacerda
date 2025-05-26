@@ -18,7 +18,8 @@ O enunciado do trabalho pode ser encontrado aqui:
 
 ## Instruções para Compilação e Execução
 
-1. **Compilação:** 
+1. **Compilação:**
+
    javac Main.java
    
 3. **Execução:**  
