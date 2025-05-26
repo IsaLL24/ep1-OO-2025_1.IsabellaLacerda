@@ -61,7 +61,10 @@ O enunciado do trabalho pode ser encontrado aqui:
    ![image](https://github.com/user-attachments/assets/5872b624-16f5-4b19-9478-6722aa8b7a3a)
 
 3. Relatório de Frequência/Notas:  
-   ![Inserir Print 3](caminho/do/print3.png)
+
+![image](https://github.com/user-attachments/assets/7a67f697-ffb3-41d2-9785-b8a209faf4bd)
+![image](https://github.com/user-attachments/assets/64b3d8dd-0160-4e44-bd52-328e96f25eda)
+
 
 ---
 
