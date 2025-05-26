@@ -18,17 +18,25 @@ O enunciado do trabalho pode ser encontrado aqui:
 
 ## Instruções para Compilação e Execução
 
-1. **Compilação:**  
-   [Descrever aqui como compilar o projeto. Exemplo: `javac Main.java` ou o script usado]
+1. **Compilação:** 
+   javac Main.java
+   
+3. **Execução:**  
+   java Main
 
-2. **Execução:**  
-   [Descrever aqui como executar o projeto. Exemplo: `java Main` ou o script usado]
-
-3. **Estrutura de Pastas:**  
-   [Descrever aqui as principais pastas do projeto]
+4. **Estrutura de Pastas:**  
+Estrutura de Pastas:
+-src/: Contém todo o código-fonte do projeto, organizado em pacotes.
+    -br/com/fcte/sistema/: Pacote principal.
+      -controller/: Contém as classes controladoras (AlunoController, AvaliacaoController, DisciplinaController).
+      -models/: Contém as classes de modelo de dados (Pessoa, Aluno, Disciplina, Turma, Avaliacao, etc.).
+      -utils/: Contém classes utilitárias (FileManager, Menu).
+  -Main.java: Classe principal que inicia o sistema.
+-bin/: Diretório onde os arquivos .class compilados serão armazenados (criado durante a compilação).
+-data/: Diretório onde os arquivos de dados (.csv) são salvos e carregados pelo FileManager (criado durante a compilação ou na primeira execução que salva dados).
 
 3. **Versão do JAVA utilizada:**  
-   [Descrever aqui como versão do JAVA utilizada no projeto. Sugestão: `java 21`]
+   JRE (23.0.2)
 
 ---
 
@@ -44,7 +52,7 @@ O enunciado do trabalho pode ser encontrado aqui:
 <img width="1280" alt="print:menu" src="https://github.com/user-attachments/assets/76248e68-37bb-43a2-9336-f380ea5b5922" />
 
 2. Cadastro de Aluno:  
-   ![Inserir Print 2](caminho/do/print2.png)
+   ![image](https://github.com/user-attachments/assets/5872b624-16f5-4b19-9478-6722aa8b7a3a)
 
 3. Relatório de Frequência/Notas:  
    ![Inserir Print 3](caminho/do/print3.png)
@@ -73,4 +81,4 @@ O enunciado do trabalho pode ser encontrado aqui:
 
 ## Contato
 
-- [Opcional: E-mail pessoal do aluno.]
+- isalima2004@gmail.com
