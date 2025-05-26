@@ -1,7 +1,7 @@
 package src.br.com.fcte.sistema.models;
 
 public class Pessoa {
-	private String nome;
+    private String nome;
     private String id;
 
      // Inicializa uma nova instância da classe Pessoa.
