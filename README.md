@@ -84,7 +84,42 @@ O enunciado do trabalho pode ser encontrado aqui:
 
 ## Observações (Extras ou Dificuldades)
 
-- [Espaço para o aluno comentar qualquer funcionalidade extra que implementou, dificuldades enfrentadas, ou considerações importantes.]
+- 1. Manipulação de Arquivos e I/O (Input/Output)
+
+Leitura e escrita de arquivos (FileReader, FileWriter, BufferedReader, PrintWriter)
+Controle de diretórios (mkdirs(), exists())
+Formatação de dados para persistência (CSV)
+
+2. Conversão de Tipos e Parsing
+
+Integer.parseInt() para converter strings em números
+Processamento manual de strings com split() para ler CSV
+Conversão entre objetos e sua representação em texto
+
+3. Gerenciamento de Recursos
+
+Uso de try-with-resources para garantir fechamento adequado de arquivos
+Controle explícito de fluxos de dados (streams)
+
+4. Tratamento de Erros Específicos
+
+Captura e tratamento de IOException
+Verificações manuais de consistência de dados
+
+5. Persistência de Relacionamentos Complexos
+
+Reconstrução de grafos de objetos (como pré-requisitos de disciplinas)
+Mapeamento entre identidades (códigos) e objetos
+
+6. Serialização Customizada
+
+Implementação manual de serialização/deserialização em formato CSV
+Controle explícito de versão/formato dos dados persistentes
+
+7. Gerenciamento de Estado Persistente
+
+Manutenção da consistência entre objetos em memória e sua representação em disco
+Controle de concorrência implícito (cada operação abre/fecha arquivos)
 
 ---
 
